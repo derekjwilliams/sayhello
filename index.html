@@ -51,6 +51,8 @@
         <h4>HTML5 Boilerplate</h4>
         <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
 
+
+
         <h4>Bootstrap</h4>
         <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
 
@@ -110,27 +112,6 @@
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
   <script>
-  hello.init({
-    facebook: FACEBOOK_CLIENT_ID,
-    windows: WINDOWS_CLIENT_ID,
-    google: GOOGLE_CLIENT_ID
-  }, {
-    redirect_uri: 'redirect.html'
-  });
-  hello.on('auth.login', function(auth) {
-
-    // call user information, for the given network
-    hello(auth.network).api('/me').then(function(r) {
-      // Inject it into the container
-      var label = document.getElementById("profile_" + auth.network);
-      if (!label) {
-        label = document.createElement('div');
-        label.id = "profile_" + auth.network;
-        document.getElementById('profile').appendChild(label);
-      }
-      label.innerHTML = '<img src="' + r.thumbnail + '" /> Hey ' + r.name;
-    });
-  });
   </script>
 </body>
 
